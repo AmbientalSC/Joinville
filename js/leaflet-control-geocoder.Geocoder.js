@@ -173,7 +173,7 @@ module.exports = {
 
 		_toggle: function() {
 			if (L.DomUtil.hasClass(this._container, 'leaflet-control-geocoder-expanded')) {
-				this._collapse();
+				this._expand();
 			} else {
 				this._expand();
 			}
@@ -190,7 +190,7 @@ module.exports = {
 			// L.DomUtil.addClass(this._alts, 'leaflet-control-geocoder-alternatives-minimized');
 			// L.DomUtil.removeClass(this._errorElement, 'leaflet-control-geocoder-error');
 			// this._input.blur(); // mobile: keyboard shouldn't stay expanded
-			// this.fire('collapse');
+			this.fire('expand');
 		},
 
 		_clearResults: function () {
